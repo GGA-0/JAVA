@@ -1,24 +1,24 @@
 package com.company;
 
 public class Floor {
+    private double width;
     private double length;
-    private double height;
 
-    public Floor(double length, double height) {
+    public Floor(double width, double length) {
+        if(width>=0){
+            this.width = width;
+        }
+        else if(width<0){
+            this.width = 0;
+        }
         if(length>=0){
             this.length = length;
         }
         else if(length<0){
             this.length = 0;
         }
-        if(height>=0){
-            this.height = height;
-        }
-        else if(height<0){
-            this.height = 0;
-        }
     }
     public double getArea(){
-        return this.height * this.length;
+        return this.length * this.width;
     }
 }
