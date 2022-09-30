@@ -1,2 +1,32 @@
-package com.company;public class PC {
+package com.company;
+
+public class PC {
+    private Case theCase;
+    private Monitor monitor;
+    private Motherboard motherboard;
+
+    public PC(Case theCase, Monitor monitor, Motherboard motherboard) {
+        this.theCase = theCase;
+        this.monitor = monitor;
+        this.motherboard = motherboard;
+    }
+    //version 1
+    public void powerUp(){
+        theCase.pressPowerButton();
+        drawLogo();
+    }
+    private void drawLogo(){
+        // Fancy graphics
+        monitor.drawPixelAt(1200, 50, "yellow");
+    }
+    //version 2
+    public Case getTheCase() {
+        return theCase;
+    }
+    public Monitor getMonitor() {
+        return monitor;
+    }
+    public Motherboard getMotherboard() {
+        return motherboard;
+    }
 }
