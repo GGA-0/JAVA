@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb8c299a-9007-4b12-a293-5bb102fbd67b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InheritanceChallengePart1/src/com/company/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InheritanceChallengePart1/src/com/company/Sentra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InheritanceChallengePart1/src/com/company/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../InheritanceChallengePart1/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../InheritanceChallengePart1/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +82,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Person" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">

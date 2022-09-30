@@ -1,3 +1,5 @@
+package com.company;
+
 public class Rectangle {
     private double width;
     private double length;
