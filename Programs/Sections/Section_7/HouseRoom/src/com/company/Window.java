@@ -2,6 +2,12 @@ package com.company;
 
 public class Window {
     private int locks;
+    boolean curtain;
+
+    public Window(int locks, boolean curtain) {
+        this.locks = locks;
+        this.curtain = curtain;
+    }
 
     public Window(int locks) {
         this.locks = locks;
