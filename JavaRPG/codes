@@ -1,1 +1,0 @@
-random.nextInt(Weapons.getMax(weapon) + 1 - Weapons.getMin(weapon)) + Weapons.getMin(weapon)
