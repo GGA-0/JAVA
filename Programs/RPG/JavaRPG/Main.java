@@ -21,7 +21,7 @@ public class Main {
             System.out.println("");
             System.out.println("What would you like to do now?      coins: " + Player[1]);       
             System.out.println("______________________________");
-            System.out.println("     Access inventory (1)           weapon: " + Weapons.getWeaponName(Player[2]));
+            System.out.println("     Access inventory (1)           weapon: " + Weapons.getWeaponName(Player[2]) + "(" + Weapons.getMin(Player[2]) + "-" + Weapons.getMax(Player[2]) +")");
             System.out.println("______________________________");
             System.out.println("           Shop (2)           ");
             System.out.println("______________________________");
@@ -47,7 +47,6 @@ public class Main {
                     break;
                     
             }
-            // Player = shop(Player[0], Player[1], Player[2]); 
 
         }
     }
@@ -55,6 +54,7 @@ public class Main {
         Random random = new Random();
         return random.nextInt(Weapons.getMax(weapon) + 1 - Weapons.getMin(weapon)) + Weapons.getMin(weapon);
     }
+    //*****Inventário*****
     public static int[] inventory(int health, int coins, int weapon){
         int[] player = new int[3];
         player[0] = health;
@@ -63,22 +63,34 @@ public class Main {
         System.out.println("Armas disponíveis: ");
         for(int i = 0; i<5; i++){
             if(inventory[i] == 1){
-                System.out.println(Weapons.getWeaponName(i) + "(" + Weapons.getMin(weapon) + "-" + Weapons.getMax(i) +")");
+                System.out.println(Weapons.getWeaponName(i) + "(" + Weapons.getMin(i) + "-" + Weapons.getMax(i) +")("+ i +")");
+            }            
+        }
+        System.out.println("");
+        System.out.println("Deseja trocar de arma?(s/n)");
+        String sn = sc.nextLine();
+        if(sn.equals("s")){
+            System.out.println("Escolha a arma que deseja equipar");
+            int chooseWeapon = sc.nextInt();
+            sc.nextLine();
+            if(inventory[chooseWeapon] == 1){
+                System.out.println(Weapons.getWeaponName(chooseWeapon) + "(" + Weapons.getMin(chooseWeapon) + "-" + Weapons.getMax(chooseWeapon) +") foi selecionado(a)");
+                player[2] = chooseWeapon;
+            }
+            else{
+                System.out.println("Arma indisponível");
             }
         }
-        
-
         return player;
     }
+
+    //*****Loja*****
     public static int[] shop(int health, int coins, int weapon){
-        
         int[] player = new int[3];
         player[0] = health;
         player[1] = coins;
         player[2] = weapon;
-
         int buy;
-
         System.out.println("______________________________");
         System.out.println("Do you want to buy a weapon?        coins: " + player[1]);
         System.out.println("______________________________");
@@ -89,9 +101,7 @@ public class Main {
         System.out.println("Heavy Hammer(4) - 4 coins");
         System.out.println("______________________________");
         System.out.println("Type your option(0: quit): ");
-
         buy = sc.nextInt();
-
         switch (buy) {
             case 2:
                 if(player[1] - 2 >= 0){
@@ -101,7 +111,6 @@ public class Main {
                     System.out.println("Moedas insuficientes!");
                 }
                 break;
-
             case 3:
                 if(player[1] - 3 >= 0){
                     player[1] -= 3;
@@ -110,7 +119,6 @@ public class Main {
                     System.out.println("Moedas insuficientes!");
                 }
                 break;
-
             case 4:
                 if(player[1] - 4 >= 0){
                     player[1] -= 4;
