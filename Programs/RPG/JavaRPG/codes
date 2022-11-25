@@ -1,0 +1,7 @@
+Puxar a loja
+Player = shop(Player[0], Player[1], Player[2]); 
+
+
+random.nextInt(Weapons.getMax(weapon) + 1 - Weapons.getMin(weapon)) + Weapons.getMin(weapon)
+
+11111
