@@ -3,12 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static Scanner sc = new Scanner(System.in);
     public static int[] inventory = new int[5];
+    public static int[] Player = new int[3]; 
 
     public static void main(String[] args) {
-        Random random = new Random();
         //Incialização do player
         // Health, coins, weapon 
-        int[] Player = new int[3]; 
         Player[0] = 20;
         Player[1] = 10;
         Player[2] = 1;
@@ -23,9 +22,9 @@ public class Main {
             System.out.println("______________________________");
             System.out.println("     Access inventory (1)           weapon: " + Weapons.getWeaponName(Player[2]) + "(" + Weapons.getMin(Player[2]) + "-" + Weapons.getMax(Player[2]) +")");
             System.out.println("______________________________");
-            System.out.println("           Shop (2)           ");
+            System.out.println("            Shop (2)          ");
             System.out.println("______________________________");
-            System.out.println("          Battle (3)          ");
+            System.out.println("          Dundgeon (3)        ");
             System.out.println("______________________________");
             System.out.println("");
             System.out.println("Type your option: ");
@@ -93,12 +92,16 @@ public class Main {
         int buy;
         System.out.println("______________________________");
         System.out.println("Do you want to buy a weapon?        coins: " + player[1]);
-        System.out.println("______________________________");
-        System.out.println("Sword(2) - 2 coins" );
-        System.out.println("______________________________");
-        System.out.println("Long Sword(3) - 3 coins");
-        System.out.println("______________________________");
-        System.out.println("Heavy Hammer(4) - 4 coins");
+        // System.out.println("______________________________");
+        // System.out.println("Sword(2) - 2 coins" );
+        // System.out.println("______________________________");
+        // System.out.println("Long Sword(3) - 3 coins");
+        // System.out.println("______________________________");
+        // System.out.println("Heavy Hammer(4) - 4 coins");
+        for(int i = 2; i<inventory.length; i++){
+            System.out.println("______________________________");
+            System.out.println(Weapons.getWeaponName(i) + "" + "(" + i + ") - " + Weapons.getWeaponPrice(i) + " coins");
+        }
         System.out.println("______________________________");
         System.out.println("Type your option(0: quit): ");
         buy = sc.nextInt();
